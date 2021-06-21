@@ -51,7 +51,7 @@ In a basic singly list which is what we will focus on in this lesson, we are alw
 
 You cannot access any of the other clues/locations without first having the first clue. To get to subsequent clues and locations you need to keep following the next clue and visit each scavenger hunt location one by one. Skipping ahead or staring in the middle is cheating!
 
-Linked lists behave in much the same way in how they are constructed in physical memory. You have to start with the head and you can only visit each item in the linked list one by one by following the links to the next item, **there's no indexing into the middle of the list like in an array!**
+Linked lists behave in much the same way in how they are constructed in physical memory. The items of a linked list can be stored anywhere in memory, they aren't all located right next to each other. You have to start with the head and you can only visit each item in the linked list one by one by following the links to the next item, **there's no indexing into the middle of the list like in an array!**
 
 
 ### Linked List Building Blocks
@@ -64,7 +64,7 @@ insert hunt vs. nodes
 
 In this lesson we are going to create a node using an object oriented approach by making a Node class.
 
-In the next section we will practice implementing a linked list using the concepts and vocabulary above. Before you begin, check your conceptual understanding using [this short quiz]().
+In the next section we will practice implementing a linked list using the concepts and vocabulary above. Before you begin, check your conceptual understanding using [this short quiz](https://forms.gle/PqCFmv6uLm5VMFin8).
 
 ## Implementing a Linked List
 
