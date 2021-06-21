@@ -9,7 +9,6 @@ By understanding linked lists you will be able to exercise your ability to compa
 
 You will also practice using programming fundamentals and object oriented programming to construct a basic linked list structure.
 
-<!-- > -->
 
 ## Learning Objectives
 
@@ -102,8 +101,6 @@ To hook up `node2` to be the next node in the sequence we can assign the head's 
 - In this lesson we learned about the basics of linked lists:
 - What a linked list is an how it compares to arrays
 - How to implement a basic linked list in Python
-
-<!-- > -->
 
 ## What's Next
 
