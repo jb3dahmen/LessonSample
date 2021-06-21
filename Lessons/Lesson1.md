@@ -31,7 +31,7 @@ You will also practice using programming fundamentals and object oriented progra
 Like an array, a linked list is a linear data structure. Linear data structures are used to organize information in a sequential manner. Arrays and linked lists both implement the List abstract data type. Any data structure that implements a list can store information that is similar to a list you might use in real life. 
 
 
-<img src="Lessons/Images/list.jpg" alt="a grocery list with three grocery items" width="400"/>
+<img src="assets/list.jpg" alt="a grocery list with three grocery items" width="400"/>
 
 
 We learned previously that the information stored in an array is contiguous in memory, which is a fancy way of saying the information is stored right next to each other in physical memory, a lot like a row of storage lockers. 
