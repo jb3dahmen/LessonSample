@@ -30,7 +30,9 @@ You will also practice using programming fundamentals and object oriented progra
 
 Like an array, a linked list is a linear data structure. Linear data structures are used to organize information in a sequential manner. Arrays and linked lists both implement the List abstract data type. Any data structure that implements a list can store information that is similar to a list you might use in real life. 
 
-Insert todo list
+
+<img src="../Lessons/Images/list.jpg" alt="a grocery list with three grocery items" width="400"/>
+
 
 We learned previously that the information stored in an array is contiguous in memory, which is a fancy way of saying the information is stored right next to each other in physical memory, a lot like a row of storage lockers. 
 
@@ -38,13 +40,11 @@ This property of arrays makes it easy to access information quickly using basic 
 
 ### Linked Lists to the Rescue
 
-That's where linked lists come in! Linked lists are **not** placed contiguously in memory which makes them more efficient in terms of time for insert and delete operations.
-
-**Check your understanding** : explain in your own words why the non-contiguous property of linked lists make them more efficient than arrays for insert and delete operations. Check your answer [here]().
+That's where linked lists come in! The items in Linked lists are **not** placed contiguously in memory which makes them more efficient in terms of time for insert and delete operations, instead of filling in gaps and moving multiple things around we can easily rearrange the links between items which you will learn is much faster.
 
 You can think of a linked list being arranged in memory a little bit like a scavenger hunt.
 
-insert ll scavenger hunt pic
+<img src="../Lessons/Images/scavengerhunt.jpg" alt="a scavenger hunt with four locations" width="600"/>
 
 In a basic singly list which is what we will focus on in this lesson, we are always given access to the start of the linked list using a reference that is typically called the `head`. Going back to our scavenger hunt analogy the head is like the first clue of the game. 
 
@@ -59,7 +59,7 @@ Let's go back to our scavenger hunt analogy. Let's pretend that each location of
 
 Linked lists are typically composed of small units called `Nodes` that store both `data` and a `next` pointer, or a reference to the next node in the sequence. 
 
-insert hunt vs. nodes
+<img src="../Lessons/Images/scavengerhunt_ll.jpg" alt="a scavenger hunt with four locations showing parallel to node and next" width="600"/>
 
 In this lesson we are going to create a node using an object oriented approach by making a Node class.
 
@@ -67,7 +67,7 @@ In the next section we will practice implementing a linked list using the concep
 
 ## Implementing a Linked List
 
-You can either watch [this video version of the implementation]() or you can follow along with the text version with code snippets below. 
+You can either watch [this video version of the implementation](https://www.youtube.com/watch?v=jQ9b6bFhYdg) or you can follow along with the text version with code snippets below. 
 
 The fundamental building block of a linked list is a `Node`. Here we create a node class, this class has two properties called `data` and `next`. Data will be initialized when we instantiate `Node` object using it's constructor. `next` is always initialized as   `None` by default upon initialization because we haven't hooked it up to any other `Node` yet! (Consequently our last node's next will always point to None).
 
