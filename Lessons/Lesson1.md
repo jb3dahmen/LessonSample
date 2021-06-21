@@ -5,7 +5,7 @@
 
 Linked Lists are a fundamental linear data structure that stores a collection of elements. 
 
-By understanding linked lists you will be able to exercise your ability to compare and contrast data structures in terms of time and space.
+By understanding linked lists you will be able to exercise your ability to compare and contrast data structures.
 
 You will also practice using programming fundamentals and object oriented programming to construct a basic linked list structure.
 
@@ -23,7 +23,6 @@ You will also practice using programming fundamentals and object oriented progra
 1. Abstract data types
 1. Python programming fundamentals
 1. Object oriented programming fundamentals
-1. time and space analysis fundamentals
 
 
 ## What is a Linked List
@@ -42,30 +41,67 @@ This property of arrays makes it easy to access information quickly using basic 
 
 That's where linked lists come in! Linked lists are **not** placed contiguously in memory which makes them more efficient in terms of time for insert and delete operations.
 
-You can think of a linked list being placed in memory like .
+**Check your understanding** : explain in your own words why the non-contiguous property of linked lists make them more efficient than arrays for insert and delete operations. Check your answer [here]().
 
-insert ll pic
+You can think of a linked list being arranged in memory a little bit like a scavenger hunt.
 
-In a basic singly list which is what we will focus on in this lesson, we are always given access to the start of the linked list using a reference that is typically called the `head`. 
+insert ll scavenger hunt pic
 
-Check for understanding
+In a basic singly list which is what we will focus on in this lesson, we are always given access to the start of the linked list using a reference that is typically called the `head`. Going back to our scavenger hunt analogy the head is like the first clue of the game. 
 
-Without the head of the linked list we cannot access any other element in the 
+You cannot access any of the other clues/locations without first having the first clue. To get to subsequent clues and locations you need to keep following the next clue and visit each scavenger hunt location one by one. Skipping ahead or staring in the middle is cheating!
 
-insert only one direction pic
+Linked lists behave in much the same way in how they are constructed in physical memory. You have to start with the head and you can only visit each item in the linked list one by one by following the links to the next item, **there's no indexing into the middle of the list like in an array!**
 
 
+### Linked List Building Blocks
 
+Let's go back to our scavenger hunt analogy. Let's pretend that each location of the hunt has a prize, this is the `data` we are going to store in our list. Each location also has a clue, this is a clue or pointer to the `next` location. 
+
+Linked lists are typically composed of small units called `Nodes` that store both `data` and a `next` pointer, or a reference to the next node in the sequence. 
+
+insert hunt vs. nodes
+
+In this lesson we are going to create a node using an object oriented approach by making a Node class.
+
+In the next section we will practice implementing a linked list using the concepts and vocabulary above. Before you begin, check your conceptual understanding using [this short quiz]().
 
 ## Implementing a Linked List
 
-## Comparing a Linked List to an Array
+You can either watch [this video version of the implementation]() or you can follow along with the text version with code snippets below. 
+
+The fundamental building block of a linked list is a `Node`. Here we create a node class, this class has two properties called `data` and `next`. Data will be initialized when we instantiate `Node` object using it's constructor. `next` is always initialized as   `None` by default upon initialization because we haven't hooked it up to any other `Node` yet! (Consequently our last node's next will always point to None).
+
+ <iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@jesslemur/LinkedListNode?lite=true"></iframe>
+
+
+To see how we can start hooking up the links between nodes, let's create three node objects that each store an integer for their data. Our goal is to build a linked list that looks like this: 
+
+`15 -> 20 -> 35 -> None`
+
+with the node that stores 15 being the `head` of the linked list.
+
+To hook up nodes in our linked list we can make use of variable assignment! let's first create a head variable and to "point" it at the first node we can assign `node1` to it. 
+
+To hook up `node2` to be the next node in the sequence we can assign the head's `next` ptr to node 2. And to hook up node3 to node2 we can do something similar.
+
+  <iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@jesslemur/LinkedListConstruct?lite=true"></iframe>
+
+
+ Now that we have built a basic working linked list, complete with links, how can we access each item and print the data and look at what's there? 
+ 
+ You may be tempted to use each of the node variables directly and print them all out, that works for this small example, but let's think ahead a little but more. How could we write code that would work for any size linked list where we don't have to deal with a bunch of separate node variables and only have access to the head?
+
+ We can use variable reassignment again! One common pattern to traverse a linked list is to create a `temporary variable` whose job it is to just hold the current node we are looking. We can start by assigning it the head and then move it to the next node in the sequence using the next ptr. We combine this with a while loop to keep repeating this step, moving link by link until we are at the end of the list, meaning the next node is  `None`. 
+
+ <iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@jesslemur/LinkedListTraverse?lite=true"></iframe>
 
 
 ## Wrap Up
 
-- In this lesson we learned about the basics of linked lists
-- 
+- In this lesson we learned about the basics of linked lists:
+- What a linked list is an how it compares to arrays
+- How to implement a basic linked list in Python
 
 <!-- > -->
 
