@@ -15,7 +15,7 @@ You will also practice using programming fundamentals and object oriented progra
 
 1. Define a linked list
 1. Implement a basic linked list structure
-1. Describe how a linked list is placed in physical memory
+1. Describe how a linked list is structured in physical memory
 
 
 ## What is a Linked List
