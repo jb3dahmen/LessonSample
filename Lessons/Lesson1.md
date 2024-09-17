@@ -72,7 +72,14 @@ You can either watch [this video version of the implementation](https://www.yout
 The fundamental building block of a linked list is a `Node`. Here we create a node class, this class has two properties called `data` and `next`. Data will be initialized when we instantiate `Node` object using it's constructor. `next` is always initialized as   `None` by default upon initialization because we haven't hooked it up to any other `Node` yet! (Consequently our last node's next will always point to None).
 
 
-<iframe src="https://trinket.io/embed/python3/fadccf71ec81" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+```python
+class Node: 
+  """A linked list node"""
+  
+  def __init__(self, data):
+    self.data = data
+    self.next = None
+```
 
 
 To see how we can start hooking up the links between nodes, let's create three node objects that each store an integer for their data. Our goal is to build a linked list that looks like this: 
@@ -85,7 +92,27 @@ To hook up nodes in our linked list we can make use of variable assignment! let'
 
 To hook up `node2` to be the next node in the sequence we can assign the head's `next` ptr to node 2. And to hook up node3 to node2 we can do something similar.
 
-  <iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@jesslemur/LinkedListConstruct?lite=true"></iframe>
+```python
+class Node: 
+  """A linked list node"""
+  
+  def __init__(self, data):
+    self.data = data
+    self.next = None
+
+
+#Create some nodes in memory
+node1 = Node(15)
+node2 = Node(20)
+node3 = Node(35)
+
+#choose the first one in the sequence to be the head
+head = node1
+
+#How do we link them?
+head.next = node2
+node2.next = node3
+```
 
 
  Now that we have built a basic working linked list, complete with links, how can we access each item and print the data and look at what's there? 
@@ -94,7 +121,17 @@ To hook up `node2` to be the next node in the sequence we can assign the head's 
 
  We can use variable reassignment again! One common pattern to traverse a linked list is to create a `temporary variable` whose job it is to just hold the current node we are looking. We can start by assigning it the head and then move it to the next node in the sequence using the next ptr. We combine this with a while loop to keep repeating this step, moving link by link until we are at the end of the list, meaning the next node is  `None`. 
 
- <iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@jesslemur/LinkedListTraverse?lite=true"></iframe>
+```python
+#Traverse
+#Before you run this what do you think will be printed?
+
+current = head
+
+while current is not None: 
+
+  print(current.data)
+  current = current.next
+```
 
 
 ## Wrap Up
