@@ -71,7 +71,8 @@ You can either watch [this video version of the implementation](https://www.yout
 
 The fundamental building block of a linked list is a `Node`. Here we create a node class, this class has two properties called `data` and `next`. Data will be initialized when we instantiate `Node` object using it's constructor. `next` is always initialized as   `None` by default upon initialization because we haven't hooked it up to any other `Node` yet! (Consequently our last node's next will always point to None).
 
- <iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@jesslemur/LinkedListNode?lite=true"></iframe>
+
+<iframe src="https://trinket.io/embed/python3/fadccf71ec81" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 
 To see how we can start hooking up the links between nodes, let's create three node objects that each store an integer for their data. Our goal is to build a linked list that looks like this: 
